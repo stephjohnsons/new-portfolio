@@ -21,8 +21,11 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body>{children}</body>
-    </html>
+  <body className={inter.className}>
+    <CustomCursor />
+    <main className="flex flex-row">
+        { children }
+    </main>
+  </body>
   )
 }
