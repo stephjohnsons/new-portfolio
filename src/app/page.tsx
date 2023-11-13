@@ -4,7 +4,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Sidebar from "../components/Sidebar"
-import CustomCursor from "../components/Cursor";
 import Home from '@/app/home/page';
 import About from '@/app/about/page';
 
@@ -21,11 +20,13 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-  <body className={inter.className}>
-    <CustomCursor />
-    <main className="flex flex-row">
-        { children }
-    </main>
-  </body>
+  <div className={inter.className}>
+    <div className="basis-1/6 transition-all duration-300">
+      <Sidebar />
+    </div>
+    <div className="basis-5/6">
+      <Home />
+    </div>
+  </div>
   )
 }
