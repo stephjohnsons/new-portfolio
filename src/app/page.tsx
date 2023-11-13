@@ -23,9 +23,6 @@ export default function RootLayout({
   return (
   <div className={inter.className}>
     <Cursor />
-    <div className="basis-1/6 transition-all duration-300">
-      <Sidebar />
-    </div>
     <div className="basis-5/6">
       { children }
     </div>
