@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 118.93 27.74">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-family: ClashDisplayVariable-Light, 'Clash Display Variable';
+        font-variation-settings: 'wght' 300;
+        font-weight: 300;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #231f20;
+        font-size: 18.13px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-2 {
+        letter-spacing: 0em;
+      }
+
+      .cls-3 {
+        letter-spacing: .05em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.1em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0em;
+      }
+
+      .cls-4 {
+        letter-spacing: .04em;
+      }
+
+      .cls-10 {
+        letter-spacing: -.17em;
+      }
+
+      .cls-11 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0em;
+      }
+
+      .cls-13 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-14 {
+        letter-spacing: -.22em;
+      }
+
+      .cls-5, .cls-6 {
+        font-family: ClashDisplayVariable-Medium, 'Clash Display Variable';
+        font-variation-settings: 'wght' 500;
+        font-weight: 500;
+      }
+
+      .cls-15 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0em;
+      }
+
+      .cls-16 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-17 {
+        letter-spacing: -.07em;
+      }
+    </style>
+  </defs>
+  <text class="cls-1" transform="translate(2.71 13.54)"><tspan x="0" y="0">S</tspan><tspan class="cls-8" x="10.95" y="0">t</tspan></text>
+  <text class="cls-4" transform="translate(19.04 12.3) rotate(12.29)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-1" transform="translate(30 13.53)"><tspan x="0" y="0">p</tspan><tspan class="cls-7" x="10.92" y="0">h</tspan></text>
+  <text class="cls-3" transform="translate(50.48 12.39) rotate(11.67)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-2" transform="translate(61.69 13.58)"><tspan x="0" y="0">n</tspan></text>
+  <text class="cls-5" transform="translate(2.52 27.43)"><tspan class="cls-9" x="0" y="0">J</tspan><tspan class="cls-11" x="11.33" y="-2.63">o</tspan><tspan class="cls-15" x="21.89" y="0">h</tspan><tspan class="cls-16" x="32.88" y="-2.79">n</tspan><tspan x="43.45" y="-2.87">s</tspan><tspan class="cls-13" x="53.33" y="-2.8">o</tspan><tspan class="cls-12" x="63.85" y="-2.63">n</tspan><tspan class="cls-14" x="74.96" y="1.14">-</tspan><tspan class="cls-10" x="77.88" y=".29">T</tspan><tspan class="cls-17" x="86.77" y=".05">s</tspan></text>
+  <text class="cls-6" transform="translate(98.15 26.68) rotate(8.32)"><tspan x="0" y="0">e</tspan></text>
+  <text class="cls-5" transform="translate(108.88 27.49)"><tspan x="0" y="0">u</tspan></text>
+</svg>
