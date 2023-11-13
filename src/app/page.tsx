@@ -4,7 +4,6 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Cursor from '@/components/Cursor'
-import Sidebar from "../components/Sidebar"
 import Home from '@/app/home/page';
 import About from '@/app/about/page';
 
