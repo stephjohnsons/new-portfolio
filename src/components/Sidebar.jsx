@@ -8,7 +8,7 @@ const Sidebar = () => {
       <nav>
         <ul className="space-y-4">
           <li>
-            <Link href="/home">
+            <Link href="/">
               <h1 className="text-5xl hover:scale-110 transition duration-200">
                 Home
               </h1>
