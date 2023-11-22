@@ -12,6 +12,20 @@ export default function About() {
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
+        <div className='flex flex-row'>
+          <div className='basis-1/6 border min-h-full'>
+            Email
+            LinkedIn
+            GitHub
+            Resume
+          </div>
+          <div className='basis-5/6 border min-h-full'>
+            info@stephjohnsons.com
+            Stephen Tseu
+            @stephjohnsons
+            click here
+          </div>
+        </div>
       </div>
     </main>
   )
