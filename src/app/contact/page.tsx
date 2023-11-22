@@ -8,9 +8,7 @@ export default function About() {
     <main className="flex min-h-screen min-w-screen flex-row justify-between p-24 border">
       {/* <Cursor /> */}
       <div className="basis-1/6">
-        <div className="h-10 flex flex-row justify-center align-items-center">
-          <BackButton />
-        </div>
+        <BackButton />
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
