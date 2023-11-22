@@ -22,6 +22,13 @@ const Sidebar = () => {
             </Link>
           </li>
           <li>
+            <Link href="/works">
+              <h1 className="text-6xl hover:scale-110 transition duration-200">
+                Works
+              </h1>
+            </Link>
+          </li>
+          <li>
             <Link href="/contact">
               <h1 className="text-6xl hover:scale-110 transition duration-200">
                 Contact
