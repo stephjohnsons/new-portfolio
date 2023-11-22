@@ -1,11 +1,8 @@
 import './globals.css'
 import './styles/fonts.css'
-import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
 import Cursor from '@/components/Cursor'
-import Home from '@/app/home/page';
-import About from '@/app/about/page';
 
 const inter = Inter({ subsets: ['latin'] })
 
