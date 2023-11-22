@@ -1,9 +1,24 @@
 import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
+import Table from "@/components/Table"
 import './styles.css'
 import '@/app/styles/fonts.css'
+import { Tab } from '@mui/material'
 
 export default function About() {
+  const labels = [
+    'Email', 
+    'LinkedIn', 
+    'GitHub', 
+    'Resume'
+  ];
+  const data = [
+    <a href="mailto:info@stephjohnsons.com">info@stephjohnsons.com</a>, 
+    <a href="https://www.linkedin.com/in/stephentseu/">Stephen Tseu</a>, 
+    <a href="https://github.com/stephjohnsons">@stephjohnsons</a>, 
+    <a href="https://drive.google.com/file/d/14NhzslgMU8rJRlM727mMHHBtDwqtCLBw/view">click here</a>
+  ];
+
   return (
     <main className="flex min-h-screen min-w-screen flex-row justify-between p-24 border">
       {/* <Cursor /> */}
@@ -12,20 +27,7 @@ export default function About() {
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
-        <div className='flex flex-row'>
-          <div className='basis-1/6 border min-h-full'>
-            Email
-            LinkedIn
-            GitHub
-            Resume
-          </div>
-          <div className='basis-5/6 border min-h-full'>
-            info@stephjohnsons.com
-            Stephen Tseu
-            @stephjohnsons
-            click here
-          </div>
-        </div>
+        <Table labels={labels} data={data} />
       </div>
     </main>
   )
