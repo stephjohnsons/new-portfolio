@@ -1,9 +1,8 @@
 import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
-import Table from "@/components/Table"
 import './styles.css'
 import '@/app/styles/fonts.css'
-import { Tab } from '@mui/material'
+import { Table, TableCell, TableHead, TableRow } from '@mui/material'
 
 export default function About() {
   const labels = [
@@ -27,7 +26,18 @@ export default function About() {
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
-        <Table labels={labels} data={data} />
+        <Table className="flex flex-row">
+          <TableHead>
+            <TableRow>
+            {labels.map((label, index) => (
+              <TableRow key={index}>
+                <TableCell>{label}</TableCell>
+                <TableCell>{data[index]}</TableCell>
+              </TableRow>
+            ))}
+            </TableRow>
+          </TableHead>
+        </Table>
       </div>
     </main>
   )
