@@ -26,7 +26,7 @@ export default function About() {
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
-        <Table className="flex flex-row">
+        <Table className="flex flex-row" size="small">
           <TableHead>
             <TableRow>
             {labels.map((label, index) => (

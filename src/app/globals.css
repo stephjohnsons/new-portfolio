@@ -2,6 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'SometypeMono';
+  src: url('../asset/SometypeMono.ttf');
+  font-weight: 400, 700;
+  font-style: normal;
+} 
+
+/* Variables: GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght */
+@font-face {
+  font-family: 'RobotoFlex';
+  src: url('../asset/RobotoFlex.ttf');
+} 
+
 :root {
   --foreground-rgb: 25, 25, 26;
   --background-rgb: 226, 206, 134;
