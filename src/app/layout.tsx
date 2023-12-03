@@ -14,23 +14,19 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <Cursor />
-      <AnimatePresence initial={false}>
         <div className="flex">
           <div className="basis-4/5">
             <Header />
-            <motion.main 
-              initial="hidden"
-              animate="enter"
+            <main
               className="mt-28 ms-2"
             >
               {children}
-            </motion.main>
+            </main>
           </div>
           <div className="basis-1/5 me-10">
             <Sidebar />
           </div>
         </div>
-      </AnimatePresence>
     </div>
   );
 };
