@@ -3,7 +3,7 @@
 import './styles.css';
 import '@/app/styles/fonts.css';
 import React, { useState, useEffect } from 'react';
-import { motion as m } from "framer-motion"
+import { motion } from "framer-motion"
 
 export default function Home() {
   const [greetMessage, setGreetMessage] = useState('');
@@ -14,11 +14,11 @@ export default function Home() {
     const hour = date.getHours();
 
     if (hour < 12) {
-      setGreetMessage(`Good morning, you.`);
+      setGreetMessage(`morning`);
     } else if (hour < 18) {
-      setGreetMessage(`Good afternoon, you.`);
+      setGreetMessage(`afternoon`);
     } else {
-      setGreetMessage(`Good evening, you.`);
+      setGreetMessage(`evening`);
     }
   };
 
@@ -32,19 +32,21 @@ export default function Home() {
 
   useEffect(() => {
     greetUser();
+    changeJobTitle();
   }, []);
 
   return (
-    <m.div
+    <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ ease: "easeInOut" }}
+      className="mb-10 text-3xl ms-1 mt-24"
     >
-      <p>{greetMessage}</p>
+      <p>Good <span>{greetMessage}</span>, you!</p>
       <h1 className='fs-1'>I'm Stephen.</h1>
       <p className="wrap-child" id="job-title">
         I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
       </p>
-    </m.div>
+    </motion.div>
   );
 }
