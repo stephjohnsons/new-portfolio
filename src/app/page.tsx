@@ -2,6 +2,7 @@ import './globals.css'
 import './styles/fonts.css'
 
 import Cursor from '@/components/Cursor'
+import Sidebar from '@/components/Sidebar'
 
 export const metadata = {
   title: 'Stephen Tseu',
@@ -15,10 +16,7 @@ export default function RootLayout({
 }) {
   return (
   <div>
-    <Cursor />
-    <div className="basis-5/6">
-      { children }
-    </div>
+    { children }
   </div>
   )
 }

@@ -1,4 +1,5 @@
 import Sidebar from "@/components/Sidebar"
+import Cursor from '@/components/Cursor'
 
 export const metadata = {
   title: 'Stephen Tseu',
@@ -12,7 +13,14 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{ children }</body>
+      <body>
+        <div className="basis-5/6">
+          { children }
+        </div>
+        <div className="basis-1/6">
+          <Sidebar />
+        </div>
+      </body>
     </html>
   )
 }
