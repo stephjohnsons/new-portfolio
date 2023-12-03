@@ -1,10 +1,11 @@
-'use client';
+"use client"
 
 import Image from 'next/image'
 import Cursor from '@/components/Cursor'
 import './home/styles.css'
 import '@/app/styles/fonts.css'
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   const [greetMessage, setGreetMessage] = useState('');
@@ -44,14 +45,19 @@ export default function Home() {
 
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
-      <div className="mb-10 text-3xl ms-1 mt-24">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        className="mb-10 text-3xl ms-1 mt-24"
+      >
         <p>{greetMessage}</p>
         <h1> I'm Stephen. </h1>    
         <p className="cta"> 👇🏼 click me! </p>
         <p className="wrap-child" id="job-title">
           I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
         </p>
-      </div>
+      </motion.div>
     </main>
   );
 }
