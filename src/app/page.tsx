@@ -19,11 +19,11 @@ export default function Home() {
     const hour = date.getHours();
 
     if (hour < 12) {
-      setGreetMessage(`Good morning, you.`);
+      setGreetMessage(`morning`);
     } else if (hour < 18) {
-      setGreetMessage(`Good afternoon, you.`);
+      setGreetMessage(`afternoon`);
     } else {
-      setGreetMessage(`Good evening, you.`);
+      setGreetMessage(`evening`);
     }
   };
 
@@ -47,9 +47,8 @@ export default function Home() {
       <div
         className="mb-10 text-3xl ms-1 mt-24"
       >
-        <p>{greetMessage}</p>
+        <p>Good {greetMessage}, you!</p>
         <h1> I'm Stephen. </h1>    
-        <p className="cta"> 👇🏼 click me! </p>
         <p className="wrap-child" id="job-title">
           I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
         </p>

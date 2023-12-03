@@ -1,6 +1,5 @@
-'use client'
-
-import React, { ReactNode } from 'react';
+"use client";
+import React, { ReactNode, useEffect } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
@@ -16,6 +15,23 @@ const variants = {
 
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const docTitle = typeof window !== 'undefined' ? document.title : "";
+
+  const onBlur = () => {
+    document.title = "Come back :(";
+  };
+
+  const onFocus = () => {
+    document.title = docTitle;
+  };
+
+  useEffect(() => {
+    return () => {
+      window.addEventListener("blur", onBlur);
+      window.addEventListener("focus", onFocus);
+    };
+  }, []);
+
   return (
     <div>
       <Cursor />
