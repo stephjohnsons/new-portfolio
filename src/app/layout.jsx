@@ -1,21 +1,17 @@
 'use client'
 
-import React, { ReactNode, useState, useEffect } from 'react';
+import React from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
 import { AnimatePresence } from 'framer-motion';
-
-interface LayoutProps {
-  children: ReactNode;
-}
 
 const variants = {
   hidden: { opacity: 0, x: -200, y: 0 },
   enter: { opacity: 1, x: 0, y: 0 },
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout = ({ Component, pageProps, router }) => {
   return (
     <div>
       {/* <Cursor /> */}
@@ -30,7 +26,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
               <main
                 className="mt-28 ms-2"
               >
-                {children}
+                <Component key={router.pathname} {...pageProps} />
               </main>
             </AnimatePresence>
           </div>
