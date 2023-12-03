@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-const Sidebar = () => {
+const Sidebar = ({ isOpen, onClose }) => {
   return (
     <aside className="w-64 h-screen p-4 ms-3 flex flex-col items-center justify-center">
       <nav>

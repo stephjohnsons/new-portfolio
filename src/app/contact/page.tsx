@@ -23,7 +23,6 @@ export default function About() {
       <Cursor />
       <div className="basis-1/6">
         <BackButton />
-        <Sidebar />
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
