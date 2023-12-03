@@ -2,6 +2,26 @@
 
 import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
+import Image from 'next/image';
+import { 
+  Photoshop, 
+  Illustrator, 
+  XD, 
+  Figma, 
+  HTML, 
+  CSS, 
+  JS, 
+  TS, 
+  Ruby, 
+  Rails, 
+  PostgreSQL, 
+  NodeJS, 
+  Vue, 
+  React, 
+  Bootstrap, 
+  Tailwind, 
+  Wordpress, 
+} from './frameworks';
 import { useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
@@ -20,7 +40,7 @@ export default function About() {
     [ 'Photoshop', 'Illustrator', 'XD' ],
     [ 'Figma', 'XD' ],
     [ 'HTML', 'CSS', 'JS & libraries', 'TS' ],
-    [ 'Ruby on Rails', 'Python', 'NodeJS', 'PostgreSQL' ],
+    [ 'Ruby on Rails', 'Ruby', 'Python', 'NodeJS', 'PostgreSQL' ],
     [ 'Vue', 'React', 'Bootstrap', 'Tailwind' ],
     [ 'Wordpress', 'Wix', 'Shopify' ]
   ];
@@ -75,11 +95,11 @@ export default function About() {
               ))}
             </th>
             {hoveredFramework && (
-              <img
-                src={`/images/frameworks/${hoveredFramework}.svg`} // Replace with the correct path
+              <Image
+                src={`./svg/${hoveredFramework}.svg`} 
                 alt={hoveredFramework}
-                width="30" // Adjust the width as needed
-                height="30" // Adjust the height as needed
+                width="30" 
+                height="30" 
               />
             )}
           </table>
