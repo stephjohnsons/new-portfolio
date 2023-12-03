@@ -36,13 +36,17 @@ export default function Home() {
   };
 
   return (
-    <div className="fs-1 d-flex"> 
+  <main className="flex min-h-screen min-w-screen flex-row justify-between p-10">
+    <div className="basis-1/6 me-8">
+    </div>
+    <div className="basis-5/6 mb-10">
       <p>{greetMessage}</p>
       <h1> I'm Stephen. </h1>    
       <p className="cta"> 👇🏼 click me! </p>
       <p className="wrap-child" id="job-title">
           I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
       </p>
-  </div>
+    </div>
+  </main>
   )
 }

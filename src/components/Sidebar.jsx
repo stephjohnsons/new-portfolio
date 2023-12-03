@@ -18,7 +18,7 @@ const Sidebar = () => {
           {sidebarLinks.map((link, index) => (
             <li key={index}>
               <Link href={link.href}>
-                <h1 className="text-6xl hover:scale-110 transition duration-200">
+                <h1 className="text-5xl transition duration-100 links py-1">
                   {link.label}
                 </h1>
               </Link>

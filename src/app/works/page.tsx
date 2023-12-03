@@ -1,5 +1,5 @@
 import Cursor from '@/components/Cursor'
-import BackButton from "@/components/BackButton"
+import TopButton from "@/components/TopButton"
 import './styles.css'
 import '@/app/styles/fonts.css'
 
@@ -17,13 +17,13 @@ export default function About() {
   const duration = [
     'Aug 2023 - present',
     'Mar 2023 - Jul 2023',
-    'Jan 2023 – Feb 2023',
+    'Jan 2023 - Feb 2023',
   ]
 
   return (
-    <main className="flex min-h-screen min-w-screen flex-row justify-between p-10 border">
+    <main className="flex min-h-screen min-w-screen flex-row justify-between p-10">
       <div className="basis-1/6 me-8">
-        <BackButton />
+        <TopButton />
       </div>
       <div className="basis-5/6">
         <div className='mb-10'>

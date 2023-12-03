@@ -14,7 +14,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
       <div className="flex">
         <div className="flex-grow">
           <Header />
-          <main>{children}</main>
+          <main className="mt-28">
+            {children}
+          </main>
         </div>
         <div className="me-5">
           <Sidebar />
