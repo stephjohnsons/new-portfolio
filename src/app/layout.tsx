@@ -19,7 +19,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <Cursor />
-        <div className="flex">
+        <div className="flex w-screen">
           <div className="basis-4/5">
             <Header />
               <main

@@ -45,7 +45,7 @@ export default function About() {
 
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
-            <div>
+      <div>
         <div className='mb-10'>
           <h1 className="text-4xl font-extrabold">
             Skills
@@ -56,11 +56,11 @@ export default function About() {
                 <tr key={index} className="text-start">
                   <td className="py-2 pe-4">{label}</td>
                   <td className="ps-2">
-                    {data[index].map((skill: string, skillIndex: number) => (
+                    {data[index].map((skill, skillIndex) => (
                       <span 
                         key={skillIndex} 
                         onMouseEnter={() => setHoveredFramework(skill)}
-                        onMouseLeave={() => setHoveredFramework('')}
+                        onMouseLeave={() => setHoveredFramework(null)}
                       >
                         {skill}
                         {skillIndex < data[index].length - 1 && ' • '}
