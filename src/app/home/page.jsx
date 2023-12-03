@@ -1,8 +1,9 @@
 'use client';
 
-import './styles.css'
-import '@/app/styles/fonts.css'
-import { useState, useEffect } from 'react'
+import './styles.css';
+import '@/app/styles/fonts.css';
+import React, { useState, useEffect } from 'react';
+import { motion as m } from "framer-motion"
 
 export default function Home() {
   const [greetMessage, setGreetMessage] = useState('');
@@ -34,13 +35,16 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="fs-1"> 
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ ease: "easeInOut" }}
+    >
       <p>{greetMessage}</p>
-      <h1> I'm Stephen. </h1>    
-      <p className="cta"> 👇🏼 click me! </p>
+      <h1 className='fs-1'>I'm Stephen.</h1>
       <p className="wrap-child" id="job-title">
-          I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
+        I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
       </p>
-  </div>
-  )
+    </m.div>
+  );
 }
