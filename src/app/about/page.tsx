@@ -2,6 +2,7 @@ import Cursor from '@/components/Cursor'
 import TopButton from "@/components/TopButton"
 import './styles.css'
 import '@/app/styles/fonts.css'
+import { motion as m } from "framer-motion"
 
 export default function About() {
   const position = [

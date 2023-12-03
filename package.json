@@ -25,6 +25,7 @@
     "boxicons": "^2.1.4",
     "eslint": "8.52.0",
     "eslint-config-next": "14.0.0",
+    "framer-motion": "^10.16.12",
     "next": "14.0.0",
     "node": "^21.1.0",
     "postcss": "8.4.31",
