@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: 'SometypeMono';
-  src: url('../asset/SometypeMono.ttf');
+  src: url('../../public/fonts/SometypeMono.ttf') format('truetype');
   font-weight: 400, 700;
   font-style: normal;
 } 
@@ -12,7 +12,7 @@
 /* Variables: GRAD,XTRA,YOPQ,YTAS,YTDE,YTFI,YTLC,YTUC,opsz,slnt,wdth,wght */
 @font-face {
   font-family: 'RobotoFlex';
-  src: url('../asset/RobotoFlex.ttf');
+  src: url('../../public/fonts/RobotoFlex.ttf') format('truetype');;
 } 
 
 :root {

@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'ClashDisplay';
-  src: url('/fonts/ClashDisplay-variable.ttf') format('truetype');
+  font-family: 'SometypeMono';
+  src: url('../../public/fonts/SometypeMono.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 h1, h2, h3 {
-  font-family: 'ClashDisplay', sans-serif;
+  font-family: 'SometypeMono', sans-serif;
 }
