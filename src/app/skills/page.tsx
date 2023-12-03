@@ -7,7 +7,7 @@ import './styles.css'
 import '@/app/styles/fonts.css'
 
 export default function About() {
-  const [hoveredFramework, setHoveredFramework] = useState(null);
+  const [hoveredFramework, setHoveredFramework] = useState<string | null>(null);
   const labels = [
     'Adobe Suite', 
     'Wireframing', 
@@ -16,7 +16,7 @@ export default function About() {
     'Frameworks',
     'CMS'
   ];
-  const data = [
+  const data: string[][] = [
     [ 'Photoshop', 'Illustrator', 'XD' ],
     [ 'Figma', 'XD' ],
     [ 'HTML', 'CSS', 'JS & libraries', 'TS' ],
@@ -56,11 +56,11 @@ export default function About() {
                 <tr key={index} className="text-start">
                   <td className="py-2 pe-4">{label}</td>
                   <td className="ps-2">
-                    {data[index].map((skill, skillIndex) => (
+                    {data[index].map((skill: string, skillIndex: number) => (
                       <span 
                         key={skillIndex} 
                         onMouseEnter={() => setHoveredFramework(skill)}
-                        onMouseLeave={() => setHoveredFramework(null)}
+                        onMouseLeave={() => setHoveredFramework('')}
                       >
                         {skill}
                         {skillIndex < data[index].length - 1 && ' • '}
@@ -71,6 +71,11 @@ export default function About() {
               ))}
             </th>
           </table>
+          {hoveredFramework && (
+            <div className="hovered-framework-container">
+              Hovered Framework: {hoveredFramework}
+            </div>
+          )}
         </div>
         <div>
           <h1 className="text-4xl font-extrabold">Languages</h1>
