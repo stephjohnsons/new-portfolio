@@ -7,16 +7,11 @@ import '@/app/styles/fonts.css'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const [docTitle, setDocTitle] = useState(document.title);
   const [greetMessage, setGreetMessage] = useState('');
   const [currentJob, setCurrentJob] = useState('web developer');
 
   const handleBlur = () => {
     document.title = "Come back :(";
-  };
-
-  const handleFocus = () => {
-    document.title = docTitle;
   };
 
   const greetUser = () => {
@@ -39,17 +34,6 @@ export default function Home() {
     const nextIndex = (currentIndex + 1) % jobTitles.length;
     setCurrentJob(jobTitles[nextIndex]);
   };
-
-  useEffect(() => {
-    greetUser();
-    window.addEventListener('blur', handleBlur);
-    window.addEventListener('focus', handleFocus);
-
-    return () => {
-      window.removeEventListener('blur', handleBlur);
-      window.removeEventListener('focus', handleFocus);
-    };
-  }, []);
 
   return (
     <div className="fs-1 d-flex"> 

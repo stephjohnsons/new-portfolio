@@ -12,7 +12,7 @@ const sidebarLinks = [
 
 const Sidebar = () => {
   return (
-    <aside className="w-screen h-screen pe-4 me-3 flex flex-col justify-center text-end items-end">
+    <aside className="w-30 h-screen pe-4 me-3 flex flex-col justify-center text-end items-end">
       <nav>
         <ul className="space-y-4">
           {sidebarLinks.map((link, index) => (
