@@ -1,21 +1,47 @@
+"use client";
+
 import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
+import { useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
 
 export default function About() {
+  const [hoveredFramework, setHoveredFramework] = useState(null);
   const labels = [
-    'Email', 
-    'LinkedIn', 
-    'GitHub', 
-    'Resume'
+    'Adobe Suite', 
+    'Wireframing', 
+    'Front-end', 
+    'Back-end',
+    'Frameworks',
+    'CMS'
   ];
   const data = [
-    <a href="mailto:info@stephjohnsons.com">info@stephjohnsons.com</a>, 
-    <a href="https://www.linkedin.com/in/stephentseu/">Stephen Tseu</a>, 
-    <a href="https://github.com/stephjohnsons">@stephjohnsons</a>, 
-    <a href="https://drive.google.com/file/d/14NhzslgMU8rJRlM727mMHHBtDwqtCLBw/view">click here</a>
+    [ 'Photoshop', 'Illustrator', 'XD' ],
+    [ 'Figma', 'XD' ],
+    [ 'HTML', 'CSS', 'JS & libraries', 'TS' ],
+    [ 'Ruby on Rails', 'Python', 'NodeJS', 'PostgreSQL' ],
+    [ 'Vue', 'React', 'Bootstrap', 'Tailwind' ],
+    [ 'Wordpress', 'Wix', 'Shopify' ]
   ];
+  const languages = [
+    'English', 
+    'Malay',
+    'Mandarin', 
+    'Cantonese',
+    'German',
+    'Spanish',
+    'Japanese', 
+  ]
+  const level = [
+    'Native', 
+    'Native',
+    'Proficient', 
+    'Conversational',
+    'Beginner (CEFR A2)',
+    'Beginner (CEFR A1)',
+    'Beginner (N5)', 
+  ]
 
   return (
     <main className="flex min-h-screen min-w-screen flex-row justify-between p-24 border">
@@ -24,19 +50,53 @@ export default function About() {
         <BackButton />
       </div>
       <div className="basis-5/6">
-        <h1 className="text-4xl font-extrabold">
-          Skills
-        </h1>
-        <table className="flex flex-row table-auto pt-5">
-          <th>
-            {labels.map((label, index) => (
-              <tr key={index} className="text-start">
-                <td className="py-2 pe-4">{label}</td>
-                <td className="ps-2">{data[index]}</td>
-              </tr>
-            ))}
-          </th>
-        </table>
+        <div className='mb-10'>
+          <h1 className="text-4xl font-extrabold">
+            Skills
+          </h1>
+          <table className="flex flex-row table-auto pt-5">
+            <th>
+              {labels.map((label, index) => (
+                <tr key={index} className="text-start">
+                  <td className="py-2 pe-4">{label}</td>
+                  <td className="ps-2">
+                    {data[index].map((skill, skillIndex) => (
+                      <span 
+                        key={skillIndex} 
+                        onMouseEnter={() => setHoveredFramework(skill)}
+                        onMouseLeave={() => setHoveredFramework(null)}
+                      >
+                        {skill}
+                        {skillIndex < data[index].length - 1 && ' • '}
+                      </span>
+                    ))}
+                  </td>
+                </tr>
+              ))}
+            </th>
+            {hoveredFramework && (
+              <img
+                src={`/images/frameworks/${hoveredFramework}.svg`} // Replace with the correct path
+                alt={hoveredFramework}
+                width="30" // Adjust the width as needed
+                height="30" // Adjust the height as needed
+              />
+            )}
+          </table>
+        </div>
+        <div>
+          <h1 className="text-4xl font-extrabold">Languages</h1>
+            <table className="flex flex-row table-auto pt-5">
+            <th>
+              {languages.map((languages, index) => (
+                <tr key={index} className="text-start">
+                  <td className="py-2 pe-4">{languages}</td>
+                  <td className="ps-2">{level[index]}</td>
+                </tr>
+              ))}
+            </th>
+          </table>
+        </div>
       </div>
     </main>
   )
