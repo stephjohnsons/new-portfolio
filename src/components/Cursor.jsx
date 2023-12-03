@@ -12,6 +12,7 @@ const Cursor = () => (
       mixBlendMode: 'exclusion'
     }}
     trailingSpeed={5}
+    showSystemCursor={true}
   />
 );
 
