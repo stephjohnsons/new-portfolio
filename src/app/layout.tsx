@@ -1,4 +1,6 @@
-import React, { ReactNode } from 'react';
+'use client'
+
+import React, { ReactNode, useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
@@ -8,6 +10,25 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [docTitle, setDocTitle] = useState('');
+  useEffect(() => {
+    const handleFocus = () => {
+        document.title = docTitle;
+    };
+
+    const handleBlur = () => {
+        document.title = "Come back :(";
+    };
+
+    window.addEventListener('blur', handleBlur);
+    window.addEventListener('focus', handleFocus);
+
+    return () => {
+      window.removeEventListener('blur', handleBlur);
+      window.removeEventListener('focus', handleFocus);
+    };
+  }, [docTitle]);
+
   return (
     <div>
       <Cursor />

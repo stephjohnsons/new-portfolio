@@ -26,16 +26,17 @@ export default function About() {
         <div className='mb-10'>
           <h1 className="text-4xl font-extrabold">About</h1>
           <p className='pt-5 pe-10'>
-          I am a web developer with an interest in content creation,<br />
-          and I'm currently a software developer with Mulah Technologies.<br />
-          <br />
-          Initiallty a classically trained cellist,<br />
-          but I have always been passionate about digital technologies and architecture.<br />
-          A nick for details could be my middle name, but I much prefer to be called a foodie!<br />
-          <br />
-          In my work, I focus on interactibility and usability of websites.<br />
-          A good website should not only be aesthetic and pretty,<br />
-          but also accessible to different types of users.<br />
+          I am a web/software developer with an interest in content creation and UX design.
+          I was a classically trained cellist but 
+          I have always been passionate about digital technologies and architecture. 
+          A nick for details could be my middle name, 
+          but I much prefer to be called a foodie!
+          <br /><br />
+          In my work, I focus on interactability and usability of websites. 
+          A good website should not only be aesthetic and pretty, 
+          but also accessible to different types of users.
+          <br /><br />
+          {/* I have some junks on my desk at the moment... */}
           </p>
         </div>
         <div>

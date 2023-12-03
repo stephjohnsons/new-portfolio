@@ -1,7 +1,5 @@
 'use client';
 
-import Image from 'next/image'
-import Cursor from '@/components/Cursor'
 import './styles.css'
 import '@/app/styles/fonts.css'
 import { useState, useEffect } from 'react'
@@ -9,10 +7,6 @@ import { useState, useEffect } from 'react'
 export default function Home() {
   const [greetMessage, setGreetMessage] = useState('');
   const [currentJob, setCurrentJob] = useState('web developer');
-
-  const handleBlur = () => {
-    document.title = "Come back :(";
-  };
 
   const greetUser = () => {
     const date = new Date();
@@ -35,8 +29,12 @@ export default function Home() {
     setCurrentJob(jobTitles[nextIndex]);
   };
 
+  useEffect(() => {
+    greetUser();
+  }, []);
+
   return (
-    <div className="fs-1 d-flex"> 
+    <div className="fs-1"> 
       <p>{greetMessage}</p>
       <h1> I'm Stephen. </h1>    
       <p className="cta"> 👇🏼 click me! </p>

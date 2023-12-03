@@ -44,7 +44,7 @@ export default function Home() {
 
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
-      <div className="mb-10 text-3xl ms-1">
+      <div className="mb-10 text-3xl ms-1 mt-24">
         <p>{greetMessage}</p>
         <h1> I'm Stephen. </h1>    
         <p className="cta"> 👇🏼 click me! </p>
