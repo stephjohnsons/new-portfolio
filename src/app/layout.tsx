@@ -4,7 +4,6 @@ import React, { ReactNode, useState, useEffect } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
-import { motion, AnimatePresence } from "framer-motion";
 
 interface LayoutProps {
   children: ReactNode;
