@@ -2,26 +2,6 @@
 
 import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
-import Image from 'next/image';
-import { 
-  Photoshop, 
-  Illustrator, 
-  XD, 
-  Figma, 
-  HTML, 
-  CSS, 
-  JS, 
-  TS, 
-  Ruby, 
-  Rails, 
-  PostgreSQL, 
-  NodeJS, 
-  Vue, 
-  ReactJS, 
-  Bootstrap, 
-  Tailwind, 
-  Wordpress, 
-} from './frameworks';
 import { useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
