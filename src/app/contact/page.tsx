@@ -2,7 +2,7 @@ import Cursor from '@/components/Cursor'
 import BackButton from "@/components/BackButton"
 import './styles.css'
 import '@/app/styles/fonts.css'
-import { Table, TableCell, TableHead, TableRow } from '@mui/material'
+import Sidebar from '@/components/Sidebar'
 
 export default function About() {
   const labels = [
@@ -23,21 +23,20 @@ export default function About() {
       <Cursor />
       <div className="basis-1/6">
         <BackButton />
+        <Sidebar />
       </div>
       <div className="basis-5/6">
         <h1 className="text-4xl font-extrabold">Contact</h1>
-        <Table className="flex flex-row" size="small">
-          <TableHead>
-            <TableRow>
+        <table className="flex flex-row table-auto pt-5">
+          <th>
             {labels.map((label, index) => (
-              <TableRow key={index}>
-                <TableCell>{label}</TableCell>
-                <TableCell>{data[index]}</TableCell>
-              </TableRow>
+              <tr key={index} className="text-start">
+                <td className="py-2 pe-4">{label}</td>
+                <td className="ps-2">{data[index]}</td>
+              </tr>
             ))}
-            </TableRow>
-          </TableHead>
-        </Table>
+          </th>
+        </table>
       </div>
     </main>
   )
