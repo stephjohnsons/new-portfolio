@@ -36,10 +36,8 @@ export default function Home() {
   };
 
   return (
-  <main className="flex min-h-screen min-w-screen flex-row justify-between p-10">
-    <div className="basis-1/6 me-8">
-    </div>
-    <div className="basis-5/6 mb-10">
+  <main className="flex min-w-screen flex-row justify-between p-10">
+    <div className="mb-10 text-3xl ms-1">
       <p>{greetMessage}</p>
       <h1> I'm Stephen. </h1>    
       <p className="cta"> 👇🏼 click me! </p>

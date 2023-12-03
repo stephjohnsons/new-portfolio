@@ -44,7 +44,7 @@ export default function About() {
   ]
 
   return (
-    <main className="flex min-h-screen min-w-screen flex-row justify-between p-10">
+    <main className="flexmin-w-screen flex-row justify-between p-10">
       <div className="basis-1/6 me-8">
         <TopButton />
       </div>
