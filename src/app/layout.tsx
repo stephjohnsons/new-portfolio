@@ -1,26 +1,20 @@
-import Sidebar from "@/components/Sidebar"
-import Cursor from '@/components/Cursor'
+import React, { ReactNode } from 'react';
+import Sidebar from '@/components/Sidebar';
+import Cursor from '@/components/Cursor';
 
-export const metadata = {
-  title: 'Stephen Tseu',
-  description: 'Web developer',
+interface LayoutProps {
+  children: ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <html lang="en">
-      <body>
-        <div className="basis-5/6">
-          { children }
-        </div>
-        <div className="basis-1/6">
-          <Sidebar />
-        </div>
-      </body>
-    </html>
-  )
-}
+    <div>
+      <div className="flex">
+        <main className="flex-grow">{children}</main>
+        <Sidebar />
+      </div>
+    </div>
+  );
+};
+
+export default Layout;

@@ -52,7 +52,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="fs-1"> 
+    <div className="fs-1 d-flex"> 
       <p>{greetMessage}</p>
       <h1> I'm Stephen. </h1>    
       <p className="cta"> 👇🏼 click me! </p>
