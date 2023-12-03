@@ -29,22 +29,29 @@ export default function Home() {
 
   const changeJobTitle = () => {
     const jobTitles = ['web developer', 'UI/UX designer', 'digital content creator', 'dreamer'];
-    const currentIndex = jobTitles.indexOf(currentJob);
 
-    const nextIndex = (currentIndex + 1) % jobTitles.length;
-    setCurrentJob(jobTitles[nextIndex]);
+    setCurrentJob((prevJob) => {
+      const currentIndex = jobTitles.indexOf(prevJob);
+      const nextIndex = (currentIndex + 1) % jobTitles.length;
+      return jobTitles[nextIndex];
+    });
   };
 
+  useEffect(() => {
+    greetUser();
+    changeJobTitle();
+  }, []);
+
   return (
-  <main className="flex min-w-screen flex-row justify-between p-10">
-    <div className="mb-10 text-3xl ms-1">
-      <p>{greetMessage}</p>
-      <h1> I'm Stephen. </h1>    
-      <p className="cta"> 👇🏼 click me! </p>
-      <p className="wrap-child" id="job-title">
+    <main className="flex min-w-screen flex-row justify-between p-10">
+      <div className="mb-10 text-3xl ms-1">
+        <p>{greetMessage}</p>
+        <h1> I'm Stephen. </h1>    
+        <p className="cta"> 👇🏼 click me! </p>
+        <p className="wrap-child" id="job-title">
           I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
-      </p>
-    </div>
-  </main>
-  )
+        </p>
+      </div>
+    </main>
+  );
 }

@@ -19,11 +19,8 @@ export default function About() {
   ];
 
   return (
-    <main className="flexmin-w-screen flex-row justify-between p-10">
-      <div className="basis-1/6 me-8">
-        <TopButton />
-      </div>
-      <div className="basis-5/6">
+    <main className="flex flex-row justify-between p-10 ">
+      <div>
         <h1 className="text-4xl font-extrabold">Contact</h1>
         <table className="flex flex-row table-auto pt-5">
           <th>

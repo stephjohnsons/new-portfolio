@@ -12,13 +12,13 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
     <div>
       <Cursor />
       <div className="flex">
-        <div className="flex-grow">
+        <div className="basis-4/5">
           <Header />
-          <main className="mt-28">
+          <main className="mt-28 ms-2">
             {children}
           </main>
         </div>
-        <div className="me-5">
+        <div className="basis-1/5 me-10">
           <Sidebar />
         </div>
       </div>
