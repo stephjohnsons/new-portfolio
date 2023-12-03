@@ -12,7 +12,7 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
-      <Cursor />
+      {/* <Cursor /> */}
         <div className="flex">
           <div className="basis-4/5">
             <Header />
