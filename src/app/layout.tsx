@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
 
@@ -9,9 +10,15 @@ interface LayoutProps {
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
+      <Cursor />
       <div className="flex">
-        <main className="flex-grow">{children}</main>
-        <Sidebar />
+        <div className="flex-grow">
+          <Header />
+          <main>{children}</main>
+        </div>
+        <div className="me-5">
+          <Sidebar />
+        </div>
       </div>
     </div>
   );

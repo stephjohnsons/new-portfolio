@@ -22,7 +22,6 @@ export default function About() {
 
   return (
     <main className="flex min-h-screen min-w-screen flex-row justify-between p-10 border">
-      <Cursor />
       <div className="basis-1/6 me-8">
         <BackButton />
       </div>
