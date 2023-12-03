@@ -11,7 +11,7 @@ import Rails from './svg/Rails.svg';
 import PostgreSQL from './svg/PostgreSQL.svg';
 import NodeJS from './svg/NodeJS.svg';
 import Vue from './svg/Vue.svg';
-import React from './svg/React.svg';
+import ReactJS from './svg/React.svg';
 import Bootstrap from './svg/Bootstrap.svg';
 import Tailwind from './svg/Tailwind.svg';
 import Wordpress from './svg/Wordpress.svg';
@@ -31,7 +31,7 @@ export {
   PostgreSQL,
   NodeJS,
   Vue,
-  React,
+  ReactJS,
   Bootstrap,
   Tailwind,
   Wordpress,

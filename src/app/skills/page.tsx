@@ -17,7 +17,7 @@ import {
   PostgreSQL, 
   NodeJS, 
   Vue, 
-  React, 
+  ReactJS, 
   Bootstrap, 
   Tailwind, 
   Wordpress, 
@@ -41,7 +41,7 @@ export default function About() {
     [ 'Figma', 'XD' ],
     [ 'HTML', 'CSS', 'JS & libraries', 'TS' ],
     [ 'Ruby on Rails', 'Ruby', 'Python', 'NodeJS', 'PostgreSQL' ],
-    [ 'Vue', 'React', 'Bootstrap', 'Tailwind' ],
+    [ 'Vue', 'ReactJS', 'Bootstrap', 'Tailwind' ],
     [ 'Wordpress', 'Wix', 'Shopify' ]
   ];
   const languages = [
@@ -94,14 +94,6 @@ export default function About() {
                 </tr>
               ))}
             </th>
-            {hoveredFramework && (
-              <Image
-                src={`./svg/${hoveredFramework}.svg`} 
-                alt={hoveredFramework}
-                width="30" 
-                height="30" 
-              />
-            )}
           </table>
         </div>
         <div>
