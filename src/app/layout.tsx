@@ -3,6 +3,7 @@ import React, { ReactNode, useEffect } from 'react';
 import Header from '@/components/Header';
 import Sidebar from '@/components/Sidebar';
 import Cursor from '@/components/Cursor';
+import { Menu } from '@/components/Menu';
 
 interface LayoutProps {
   children: ReactNode;
@@ -38,6 +39,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
         <div className="flex w-screen">
           <div className="basis-4/5">
             <Header />
+            <Menu />
               <main
                 className="mt-28 ms-2"
               >
