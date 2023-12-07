@@ -86,11 +86,11 @@ button {
   place-items: center;
   width: 88px;
   height: 88px;
-  background-image: url('@/public/images/hamburger.svg');
+  background-image: url('../../public/images/assets/menu.svg');
 }
 
 .burger.open {
-  background-image: url('@/public/images/close.svg');
+  background-image: url('../../public/images/assets/close.svg');
 }
 
 .background {

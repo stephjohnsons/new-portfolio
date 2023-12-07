@@ -2,6 +2,7 @@ import Cursor from '@/components/Cursor'
 import TopButton from "@/components/TopButton"
 import './styles.css'
 import '@/app/styles/fonts.css'
+import Slider from './slider';
 
 export default function About() {
   const position = [
@@ -28,6 +29,7 @@ export default function About() {
           <p className='pt-5 pe-10'>
             Coming soon
           </p>
+          <Slider />
         </div>
       </div>
     </main>
