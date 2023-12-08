@@ -10,10 +10,6 @@ export default function Home() {
   const [greetMessage, setGreetMessage] = useState('');
   const [currentJob, setCurrentJob] = useState('web developer');
 
-  const handleBlur = () => {
-    document.title = "Come back :(";
-  };
-
   const greetUser = () => {
     const date = new Date();
     const hour = date.getHours();
@@ -43,15 +39,24 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-w-screen flex-row justify-between p-10">
+    <main className="flex min-w-screen flex-col justify-between p-10 columns-2">
       <div
-        className="mb-10 text-3xl ms-1 mt-24"
+        className="mb-10 text-3xl ms-1 mt-24 flex"
       >
-        <p>Good {greetMessage}, you!</p>
-        <h1> I'm Stephen. </h1>    
-        <p className="wrap-child" id="job-title">
-          I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
-        </p>
+        <div>
+          <iframe 
+            src="https://lottie.host/embed/1462331b-0d0f-44bf-8f2a-52d004b2e67a/gcXPSTtHcl.json"
+            width="400" 
+            height="300" 
+          ></iframe>
+        </div>
+        <div>
+          <p>Good {greetMessage}, you!</p>
+          <h1> I'm Stephen. </h1>    
+          <p className="wrap-child" id="job-title">
+            I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
+          </p>
+        </div>
       </div>
     </main>
   );

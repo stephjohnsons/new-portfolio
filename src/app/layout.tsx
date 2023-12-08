@@ -13,7 +13,6 @@ const variants = {
   enter: { opacity: 1, x: 0, y: 0 },
 }
 
-
 const Layout: React.FC<LayoutProps> = ({ children }) => {
   const docTitle = typeof window !== 'undefined' ? document.title : "";
 
