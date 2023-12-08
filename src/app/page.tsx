@@ -1,13 +1,12 @@
 "use client"
 
 import Image from 'next/image'
-import Cursor from '@/components/Cursor'
 import './home/styles.css'
 import '@/app/styles/fonts.css'
 import { useState, useEffect } from 'react'
 
 export default function Home() {
-  const [greetMessage, setGreetMessage] = useState('');
+  const [greetMessage, setGreetMessage] = useState('morning');
   const [currentJob, setCurrentJob] = useState('web developer');
 
   const greetUser = () => {
@@ -39,23 +38,24 @@ export default function Home() {
   }, []);
 
   return (
-    <main className="flex min-w-screen flex-col justify-between p-10 columns-2">
+    <main className="flex min-w-screen max-h-1 flex-col justify-between p-10 columns-2">
       <div
         className="mb-10 text-3xl ms-1 mt-24 flex"
       >
-        <div>
+        <div className="-ms-44">
           <iframe 
             src="https://lottie.host/embed/1462331b-0d0f-44bf-8f2a-52d004b2e67a/gcXPSTtHcl.json"
-            width="400" 
-            height="300" 
+            width="600" 
+            height="550" 
           ></iframe>
         </div>
-        <div>
+        <div className='-ms-72'>
           <p>Good {greetMessage}, you!</p>
           <h1> I'm Stephen. </h1>    
           <p className="wrap-child" id="job-title">
             I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
           </p>
+          <p className='ms-40 text-xl opacity-50'>👆🏻 Click me!</p>
         </div>
       </div>
     </main>

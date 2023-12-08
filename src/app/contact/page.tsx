@@ -1,4 +1,4 @@
-import Cursor from '@/components/Cursor'
+import Cursor from '@/components/Cursor/Cursor'
 import TopButton from "@/components/TopButton"
 import './styles.css'
 import '@/app/styles/fonts.css'

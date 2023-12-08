@@ -35,6 +35,7 @@ html.dark-mode {
 
 * {
   border-width: 0;
+  /* cursor: none; */
 }
 
 .links {
@@ -61,124 +62,26 @@ html.dark-mode {
 aside {
   z-index: 10;
 }
-/* frontendjoe */
-body {
-  font-family: "Poppins";
-  height: 100vh;
-}
 
-button {
-  border: 0;
-  padding: 0;
-  background: transparent;
-  cursor: pointer;
-}
-
-.burger, .menu {
+.cursor {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #fefefe;
+  border-radius: 100%;
   position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 150ms ease;
+  transition-property: background-color, opacity, transform, mix-blend-mode;
+  z-index: 9999;
+  mix-blend-mode: difference;
 }
 
-.burger {
-  z-index: 4;
-  top: 0;
-  left: 0;
-  display: grid;
-  place-items: center;
-  width: 88px;
-  height: 88px;
-  background-image: url('../../public/images/assets/menu.svg');
+.fade-in {
+  transition: opacity 1.5s ease;
 }
 
-.burger.open {
-  background-image: url('../../public/images/assets/close.svg');
-}
-
-.background {
-  position: fixed;
-  z-index: 2;
-  top: 44px;
-  left: 44px;
-  aspect-ratio: 1/1;
-  translate: -50% -50%;
-  height: 88px;
-  background-color: inherit;
-  border-radius: 50%;
+.fade-out {
   opacity: 0;
-  transition: 0s;
-}
-
-.background.open {
-  height: 300vh;
-  opacity: 0.05;
-}
-
-.menu {
-  z-index: 3;
-  top: 0;
-  left: 0;
-  display: flex;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: 0.05s;
-}
-
-.menu nav { 
-  display: flex; 
-  flex-direction: column; 
-  justify-content: center; 
-  align-items: flex-start;
-  padding-left: 100px;
-}
-
-.menu.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-.menu a {
-  color: inherit;
-  font-size: 32px;
-  padding: 20px 0 20px 20px;
-  text-decoration: none;
-  text-transform: capitalize;
-  opacity: 0;
-  cursor: pointer;
-  transition: 0.4s;
-}
-
-.menu nav:hover > a {
-  opacity: 0.25
-}
-
-.menu nav > a:hover {
-  opacity: 1;
-}
-
-.menu.open a {
-  opacity: 1;
-}
-
-@keyframes appear {
-  0% {
-    opacity: 0;
-    translate: 0 30px;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-.appear {
-  animation: appear 0.32s backwards;
-}
-
-.page {
-  transition: 0.6s;
-}
-
-.page.open {
-  filter: blur(10px);
+  transition: opacity 1.5s ease;
 }

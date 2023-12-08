@@ -24,6 +24,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/home/page.jsx", "src/app/_app.jsx", "src/app/layout.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/home/page.jsx", "src/app/_app.jsx", "src/app/layout.tsx", "src/components/Cursor/Cursor.jsx"],
   "exclude": ["node_modules"]
 }
