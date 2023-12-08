@@ -27,7 +27,7 @@ const TrendingSlider = () => {
     {
       id: 4,
       img: "https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=600",
-      description: "Headephone",
+      description: "Headphone",
       price: 40,
     },
     {
@@ -46,12 +46,16 @@ const TrendingSlider = () => {
 
   const slideLeft = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft - 235;
+    if (slider) {
+      slider.scrollLeft = slider.scrollLeft - 235;
+    }
   };
 
   const slideRight = () => {
     let slider = document.getElementById("slider");
-    slider.scrollLeft = slider.scrollLeft + 235;
+    if (slider) {
+      slider.scrollLeft = slider.scrollLeft + 235;
+    }
   };
   return (
     <>
