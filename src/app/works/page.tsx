@@ -1,4 +1,5 @@
 import TopButton from "@/components/TopButton"
+import Slider from "./slider"
 import './styles.css'
 import '@/app/styles/fonts.css'
 
@@ -27,6 +28,7 @@ export default function About() {
           <p className='pt-5 pe-10'>
             Coming soon
           </p>
+          <Slider />
         </div>
       </div>
     </main>
