@@ -27,6 +27,7 @@ export default function FlyEasy() {
             and wanted to recreate the same design 
             based on his UI. 
             Buttons, table layout were slightly changed.
+            <p className='text-red-600'>Not for commercial purposes.</p>
           </p>
         </CardContent>
       </CardActionArea>

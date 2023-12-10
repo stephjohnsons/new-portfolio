@@ -13,11 +13,11 @@ export default function Works() {
       <div>
         <div className='mb-10'>
           <h1 className="text-4xl font-extrabold">Works</h1>
-          <Box className='flex pt-5 space-x-4'>
+          <Box className='flex pt-2 space-x-2'>
             <FlyEasy />
             <InstagramQuotes />
           </Box>
-          <Box className='flex pt-5 space-x-4'>
+          <Box className='flex pt-2 space-x-2'>
             <KarlThoene />
             <Ionic />
           </Box>
