@@ -1,8 +1,6 @@
-import Cursor from '@/components/Cursor/Cursor'
 import TopButton from "@/components/TopButton"
 import './styles.css'
 import '@/app/styles/fonts.css'
-import Slider from './slider';
 
 export default function About() {
   const position = [
@@ -22,14 +20,13 @@ export default function About() {
   ]
 
   return (
-    <main className="flexmin-w-screen flex-row justify-between p-10">
-            <div>
+    <main className="flex min-w-screen flex-row justify-between p-10">
+      <div>
         <div className='mb-10'>
           <h1 className="text-4xl font-extrabold">Works</h1>
           <p className='pt-5 pe-10'>
             Coming soon
           </p>
-          <Slider />
         </div>
       </div>
     </main>

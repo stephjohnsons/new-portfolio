@@ -1,6 +1,5 @@
 "use client";
 
-import Cursor from '@/components/Cursor/Cursor'
 import TopButton from "@/components/TopButton"
 import { useState } from 'react';
 import './styles.css'
