@@ -4,6 +4,7 @@ import TopButton from "@/components/TopButton"
 import { useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
+import { Box } from "@mui/material";
 
 export default function About() {
   const [hoveredFramework, setHoveredFramework] = useState<string | null>(null);
@@ -44,8 +45,8 @@ export default function About() {
 
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
-      <div>
-        <div className='mb-10'>
+      <Box>
+        <Box className='mb-10'>
           <h1 className="text-4xl font-extrabold">
             Skills
           </h1>
@@ -71,12 +72,12 @@ export default function About() {
             </th>
           </table>
           {hoveredFramework && (
-            <div className="hovered-framework-container">
+            <Box className="hovered-framework-container">
               Hovered Framework: {hoveredFramework}
-            </div>
+            </Box>
           )}
-        </div>
-        <div>
+        </Box>
+        <Box>
           <h1 className="text-4xl font-extrabold">Languages</h1>
             <table className="flex flex-row table-auto pt-5">
             <th>
@@ -88,8 +89,8 @@ export default function About() {
               ))}
             </th>
           </table>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </main>
   )
 }
