@@ -1,7 +1,8 @@
 import TopButton from "@/components/TopButton"
-import Slider from "./slider"
+import Slider from "./list/FlyEasy"
 import './styles.css'
 import '@/app/styles/fonts.css'
+import { Box } from "@mui/material"
 
 export default function About() {
   const position = [
@@ -25,10 +26,9 @@ export default function About() {
       <div>
         <div className='mb-10'>
           <h1 className="text-4xl font-extrabold">Works</h1>
-          <p className='pt-5 pe-10'>
-            Coming soon
-          </p>
-          <Slider />
+          <Box className='pt-5 pe-10'>
+            <Slider />
+          </Box>
         </div>
       </div>
     </main>

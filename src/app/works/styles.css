@@ -19,3 +19,8 @@ html {
 html.dark-mode {
   --cursor-color: #fff
 }
+
+.palette.primary {
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
+}
