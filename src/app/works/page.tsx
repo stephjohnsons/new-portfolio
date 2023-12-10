@@ -10,8 +10,8 @@ import { Box } from "@mui/material"
 export default function Works() {
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
-      <div>
-        <div className='mb-10'>
+      <Box>
+        <Box className='mb-10'>
           <h1 className="text-4xl font-extrabold">Works</h1>
           <Box className='flex pt-2 space-x-2'>
             <FlyEasy />
@@ -21,8 +21,8 @@ export default function Works() {
             <KarlThoene />
             <Ionic />
           </Box>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </main>
   )
 }
