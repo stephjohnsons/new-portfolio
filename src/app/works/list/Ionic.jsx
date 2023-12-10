@@ -14,18 +14,19 @@ export default function FlyEasy() {
       <CardActionArea>
         <CardContent className='rounded-3xl'>
           <h2 className='text-2xl mb-2'>
-            FlyEasy
+            Ionic
           </h2>
           <Box display='flex' maxHeight="24px" className='mb-2'>
             <img src="/svg/HTML.svg" alt="HTML" style={{ maxHeight: '24px', marginRight: '8px' }}/>
             <img src="/svg/Bootstrap.svg" alt="Bootstrap" style={{ maxHeight: '24px', marginRight: '8px' }}/>
-            <img src="/svg/JS.svg" alt="Javascript" style={{ maxHeight: '24px', marginRight: '8px' }}/>
+            {/* <img src="/svg/JS.svg" alt="Javascript" style={{ maxHeight: '24px', marginRight: '8px' }}/> */}
           </Box>
           <p className='text-sm'>
             <u>Self-initiated project.</u><span> </span>
-            Concept website for a fictitious travel agency 
-            based in Malaysia, with the purpose of 
-            practising the use of Bootstrap components and framework.
+            Inspired by @ui.shreyash's UI design, 
+            and wanted to recreate the same design 
+            based on his UI. 
+            Buttons, table layout were slightly changed.
           </p>
         </CardContent>
       </CardActionArea>

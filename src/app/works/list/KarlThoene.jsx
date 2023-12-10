@@ -4,7 +4,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import { CardActionArea, Box } from '@mui/material';
 
-export default function FlyEasy() {
+export default function KarlThoene() {
   return (
     <Card sx={{ 
       maxWidth: 345, 
@@ -14,18 +14,16 @@ export default function FlyEasy() {
       <CardActionArea>
         <CardContent className='rounded-3xl'>
           <h2 className='text-2xl mb-2'>
-            FlyEasy
+            Karl Thöne
           </h2>
           <Box display='flex' maxHeight="24px" className='mb-2'>
-            <img src="/svg/HTML.svg" alt="HTML" style={{ maxHeight: '24px', marginRight: '8px' }}/>
-            <img src="/svg/Bootstrap.svg" alt="Bootstrap" style={{ maxHeight: '24px', marginRight: '8px' }}/>
-            <img src="/svg/JS.svg" alt="Javascript" style={{ maxHeight: '24px', marginRight: '8px' }}/>
+            <p>Wix, Adobe AI, UI/UX</p>
           </Box>
           <p className='text-sm'>
-            <u>Self-initiated project.</u><span> </span>
-            Concept website for a fictitious travel agency 
-            based in Malaysia, with the purpose of 
-            practising the use of Bootstrap components and framework.
+            Website for German composer Karl Thöne, 
+            commissioned by Datin Veronika Thöne. 
+            Used to host the works of Karl's compositions, 
+            as well as updates for his 100th anniversary festival.
           </p>
         </CardContent>
       </CardActionArea>
