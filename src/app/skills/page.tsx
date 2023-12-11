@@ -1,16 +1,19 @@
 "use client";
 
-import { useState } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
-import { Box } from "@mui/material";
+import { Box, Tabs, Tab } from "@mui/material";
 
-import Skills from './Skills';
-import Languages from './Languages';
+import Skills from './[categorySlug]/Skills';
+import Languages from './[categorySlug]/Languages';
 
-export default function About() {
-  const [showSkills, setShowSkills] = useState(true);
-  const [showLanguages, setShowLanguages] = useState(false);
+interface SkillsProps {
+  children: ReactNode;
+}
+
+const SkillPage: React.FC<SkillsProps> = ({ children }) => {
+  const [selectedMenu, setSelectedMenu] = useState('Skills');
 
   const labels = [
     'Adobe Suite', 
@@ -47,28 +50,31 @@ export default function About() {
     'Beginner (N5)', 
   ]
 
-  const handleSkillsClick = () => {
-    setShowSkills(true);
-    setShowLanguages(false);
-  };
-
-  const handleLanguagesClick = () => {
-    setShowLanguages(true);
-    setShowSkills(false);
+  const handleMenuClick = (menu: React.SetStateAction<string>) => {
+    setSelectedMenu(menu);
   };
 
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
       <Box>
         <Box className='mb-10'>
-          <div className="submenu-buttons g-2">
-            <button onClick={handleSkillsClick} className=" text-3xl">Skills</button>
-            <button onClick={handleLanguagesClick} className="ms-3 text-3xl">Languages</button>
-          </div>
-          {showSkills && <Skills labels={labels} data={data} />}
-          {showLanguages && <Languages languages={languages} level={level} />}
+          {/* <Tabs
+            value={selectedMenu}
+            onChange={(e, newValue) => handleMenuClick(newValue)}
+          >
+            <Tab label="Skills" value="Skills" onClick={() => handleMenuClick('Skills')} />
+            <Tab label="Languages" value="Languages" onClick={() => handleMenuClick('Languages')} />
+          </Tabs> */}
+          <h1 className='text-4xl'>Skills</h1>
+          <Skills labels={labels} data={data} /> 
+        </Box>
+        <Box className='pt-5'>
+          <h1 className='text-4xl'>Spoken Languages</h1>
+          <Languages languages={languages} level={level} />
         </Box>
       </Box>
     </main>
   )
 }
+
+export default SkillPage

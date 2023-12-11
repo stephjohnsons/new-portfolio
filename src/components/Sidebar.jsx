@@ -5,6 +5,7 @@ import Link from 'next/link';
 const sidebarLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
+  { label: 'Cello', href: '/cello' },
   { label: 'Works', href: '/works' },
   { label: 'Skills', href: '/skills' },
   { label: 'Contact', href: '/contact' },

@@ -14,26 +14,6 @@ const variants = {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-  const docTitle = typeof window !== 'undefined' ? document.title : "";
-
-  useEffect(() => {
-    const onBlur = () => {
-      document.title = "Come back :(";
-    };
-  
-    const onFocus = () => {
-      document.title = docTitle;
-    };
-  
-    window.addEventListener("blur", onBlur);
-    window.addEventListener("focus", onFocus);
-  
-    return () => {
-      window.removeEventListener("blur", onBlur);
-      window.removeEventListener("focus", onFocus);
-    };
-  }, [docTitle]);
-
   return (
     <div>
       <div className="flex w-screen">

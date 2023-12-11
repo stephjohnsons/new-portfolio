@@ -23,7 +23,7 @@ export default function KarlThoene() {
             Website for German composer Karl Thöne, 
             commissioned by Datin Veronika Thöne. 
             Used to host the works of Karl's compositions, 
-            as well as updates for his 100th anniversary festival.
+            as well as updates for his music festival.
           </p>
         </CardContent>
       </CardActionArea>

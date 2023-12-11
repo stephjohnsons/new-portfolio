@@ -14,19 +14,16 @@ export default function FlyEasy() {
       <CardActionArea>
         <CardContent className='rounded-3xl'>
           <h2 className='text-2xl mb-2'>
-            Ionic
+            Calculator
           </h2>
           <Box display='flex' maxHeight="24px" className='mb-2'>
             <img src="/svg/HTML.svg" alt="HTML" style={{ maxHeight: '24px', marginRight: '8px' }}/>
-            <img src="/svg/Bootstrap.svg" alt="Bootstrap" style={{ maxHeight: '24px', marginRight: '8px' }}/>
-            {/* <img src="/svg/JS.svg" alt="Javascript" style={{ maxHeight: '24px', marginRight: '8px' }}/> */}
+            <img src="/svg/CSS.svg" alt="CSS" style={{ maxHeight: '24px', marginRight: '8px' }}/>
+            <img src="/svg/JS.svg" alt="Javascript" style={{ maxHeight: '24px', marginRight: '8px' }}/>
           </Box>
           <p className='text-sm'>
             <u>Self-initiated project.</u><span> </span>
-            Inspired by @ui.shreyash's UI design, 
-            and wanted to recreate the same design 
-            based on his UI. 
-            Buttons, table layout were slightly changed.
+            Assignment from bootcamp.
           </p>
         </CardContent>
       </CardActionArea>

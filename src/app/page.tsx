@@ -2,6 +2,8 @@
 
 import './home/styles.css'
 import '@/app/styles/fonts.css'
+import { TypeAnimation } from 'react-type-animation';
+
 import { Box } from '@mui/material'
 
 export default function Home() {
@@ -33,7 +35,26 @@ export default function Home() {
           <p>Good {greetMessage}, you!</p>
           <h1> I'm Stephen. </h1>    
           <p className="wrap-child" id="job-title">
-            I am a web developer.
+            I am a<span> </span>
+            <span>
+              <TypeAnimation
+                preRenderFirstString={true}
+                sequence={[
+                  'web developer.',
+                  1000,
+                  'ui designer.',
+                  1000,
+                  'ux designer.',
+                  1000,
+                  'digital content creator.',
+                  1000
+                ]}
+                wrapper="span"
+                speed={50}
+                style={{ fontSize: '1em', display: 'inline-block' }}
+                repeat={Infinity}
+              />
+            </span>
           </p>
         </Box>
       </Box>
