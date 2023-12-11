@@ -1,13 +1,17 @@
 "use client";
 
-import TopButton from "@/components/TopButton"
 import { useState } from 'react';
 import './styles.css'
 import '@/app/styles/fonts.css'
 import { Box } from "@mui/material";
 
+import Skills from './Skills';
+import Languages from './Languages';
+
 export default function About() {
-  const [hoveredFramework, setHoveredFramework] = useState<string | null>(null);
+  const [showSkills, setShowSkills] = useState(true);
+  const [showLanguages, setShowLanguages] = useState(false);
+
   const labels = [
     'Adobe Suite', 
     'Wireframing', 
@@ -43,52 +47,26 @@ export default function About() {
     'Beginner (N5)', 
   ]
 
+  const handleSkillsClick = () => {
+    setShowSkills(true);
+    setShowLanguages(false);
+  };
+
+  const handleLanguagesClick = () => {
+    setShowLanguages(true);
+    setShowSkills(false);
+  };
+
   return (
     <main className="flex min-w-screen flex-row justify-between p-10">
       <Box>
         <Box className='mb-10'>
-          <h1 className="text-4xl font-extrabold">
-            Skills
-          </h1>
-          <table className="flex flex-row table-auto pt-5">
-            <th>
-              {labels.map((label, index) => (
-                <tr key={index} className="text-start">
-                  <td className="py-2 pe-4">{label}</td>
-                  <td className="ps-2">
-                    {data[index].map((skill, skillIndex) => (
-                      <span 
-                        key={skillIndex} 
-                        onMouseEnter={() => setHoveredFramework(skill)}
-                        onMouseLeave={() => setHoveredFramework(null)}
-                      >
-                        {skill}
-                        {skillIndex < data[index].length - 1 && ' • '}
-                      </span>
-                    ))}
-                  </td>
-                </tr>
-              ))}
-            </th>
-          </table>
-          {hoveredFramework && (
-            <Box className="hovered-framework-container">
-              Hovered Framework: {hoveredFramework}
-            </Box>
-          )}
-        </Box>
-        <Box>
-          <h1 className="text-4xl font-extrabold">Languages</h1>
-            <table className="flex flex-row table-auto pt-5">
-            <th>
-              {languages.map((languages, index) => (
-                <tr key={index} className="text-start">
-                  <td className="py-2 pe-4">{languages}</td>
-                  <td className="ps-2">{level[index]}</td>
-                </tr>
-              ))}
-            </th>
-          </table>
+          <div className="submenu-buttons g-2">
+            <button onClick={handleSkillsClick} className=" text-3xl">Skills</button>
+            <button onClick={handleLanguagesClick} className="ms-3 text-3xl">Languages</button>
+          </div>
+          {showSkills && <Skills labels={labels} data={data} />}
+          {showLanguages && <Languages languages={languages} level={level} />}
         </Box>
       </Box>
     </main>
