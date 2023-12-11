@@ -1,42 +1,21 @@
 "use client"
 
-import Image from 'next/image'
 import './home/styles.css'
 import '@/app/styles/fonts.css'
-import { useState, useEffect } from 'react'
 import { Box } from '@mui/material'
 
 export default function Home() {
-  const [greetMessage, setGreetMessage] = useState('morning');
-  const [currentJob, setCurrentJob] = useState('web developer');
+  let greetMessage;
+  const date = new Date();
+  const hour = date.getHours();
 
-  const greetUser = () => {
-    const date = new Date();
-    const hour = date.getHours();
-
-    if (hour < 12) {
-      setGreetMessage(`morning`);
-    } else if (hour < 18) {
-      setGreetMessage(`afternoon`);
-    } else {
-      setGreetMessage(`evening`);
-    }
+  if (hour < 12) {
+    greetMessage = "morning";
+  } else if (hour < 18) {
+    greetMessage = "afternoon";
+  } else {
+    greetMessage = "evening";
   };
-
-  const changeJobTitle = () => {
-    const jobTitles = ['web developer', 'UI/UX designer', 'digital content creator', 'dreamer'];
-
-    setCurrentJob((prevJob) => {
-      const currentIndex = jobTitles.indexOf(prevJob);
-      const nextIndex = (currentIndex + 1) % jobTitles.length;
-      return jobTitles[nextIndex];
-    });
-  };
-
-  useEffect(() => {
-    greetUser();
-    changeJobTitle();
-  }, []);
 
   return (
     <main className="flex min-w-screen max-h-1 flex-col justify-between p-10 columns-2">
@@ -54,9 +33,8 @@ export default function Home() {
           <p>Good {greetMessage}, you!</p>
           <h1> I'm Stephen. </h1>    
           <p className="wrap-child" id="job-title">
-            I am a <span className="job" onClick={changeJobTitle}>{currentJob}</span>.
+            I am a web developer.
           </p>
-          <p className='ms-40 text-xl opacity-50'>👆🏻 Click me!</p>
         </Box>
       </Box>
     </main>
